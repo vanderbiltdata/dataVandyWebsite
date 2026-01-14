@@ -7,14 +7,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="navbar">
         <div class="navbar-inner">
           <div class="nav-indicator"></div>
-          <a href="#home" class="nav-link active">Home</a>
-          <a href="#mission" class="nav-link">Mission</a>
+          <a href="#mission" class="nav-link active">Mission</a>
           <a href="#events" class="nav-link">Events</a>
           <a href="#board" class="nav-link">Board</a>
           <a href="#gallery" class="nav-link">Gallery</a>
@@ -23,10 +23,245 @@
     </header>
     
     <div id="customCursor"></div>
-    <script src="script.js"></script>    
-    <img src="assets/VANDY_logo.png" alt="VANDY Logo" class="vandy-logo">
-    <div class="x-character">x</div>
-    <img src="assets/DATA_logo.png" alt="DATA Logo" class="data-logo">
-    <div class="coming-soon">Coming Soon</div>
+    
+    <!-- Main/Hero Section -->
+    <section id="mission" class="section hero-section">
+        <div class="hero-content">
+            <div class="logo-section">
+                <img src="assets/VANDY_logo.png" alt="VANDY Logo" class="vandy-logo">
+                <div class="x-character">x</div>
+                <img src="assets/DATA_logo.png" alt="DATA Logo" class="data-logo">
+            </div>
+            <div class="mission">
+                <div class="mission-statement">Harnessing the healing power of art to bring joy, connection, and meaningful moments</div>
+                <div class="mission-points">
+                    <div class="mission-point-wrapper">
+                        <i class="fas fa-paint-brush floating-icon icon-creativity"></i>
+                        <div class="mission-point">Fostering creativity and self-expression</div>
+                    </div>
+                    <div class="mission-point-wrapper">
+                        <i class="fas fa-heart floating-icon icon-connection"></i>
+                        <div class="mission-point">Building connections between participants and caregivers</div>
+                    </div>
+                    <div class="mission-point-wrapper">
+                        <i class="fas fa-shield-alt floating-icon icon-safety"></i>
+                        <div class="mission-point">Creating safe, inclusive spaces for healing</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="section">
+        <div class="section-content">
+            <h2 class="section-title">Events</h2>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                <div class="timeline-events">
+                    <!-- Events will be dynamically inserted here -->
+                    <!-- Sample events - replace with actual data -->
+                    <div class="timeline-event" data-side="left">
+                        <div class="event-content">
+                            <div class="event-date">November 15, 2025</div>
+                            <div class="event-title">Good Samaritan Health and Rehab</div>
+                            <div class="event-description">We had an amazing time creating beautiful Earth-themed paintings with residents! Watching their faces light up as they brought their artistic visions to life was truly inspiring.</div>
+                        </div>
+                        <div class="event-dot"></div>
+                        <div class="event-images event-images-right">
+                            <img src="assets/event_4/582090489_17900542791317967_2061582005305735250_n.jpg" alt="Event Photo" class="event-image">
+                            <img src="assets/event_4/582756780_17900542770317967_886733324901275651_n.jpg" alt="Event Photo" class="event-image">
+                            <img src="assets/event_4/584370296_17900542749317967_262403425585232433_n.jpg" alt="Event Photo" class="event-image">
+                        </div>
+                    </div>
+                    <div class="timeline-event" data-side="right">
+                        <div class="event-content">
+                            <div class="event-date">November 8, 2025</div>
+                            <div class="event-title">Mary Queen of Angels</div>
+                            <div class="event-description">What a colorful day! Residents dove into a creative adventure with crayons, watercolors, and markers, filling the room with laughter and beautiful artwork that sparked wonderful conversations.</div>
+                        </div>
+                        <div class="event-dot"></div>
+                        <div class="event-images event-images-left">
+                            <img src="assets/event_3/575989958_17899807770317967_3709832481157420682_n.jpg" alt="Event Photo" class="event-image">
+                            <img src="assets/event_3/576543886_17899807794317967_8858097982227869552_n.jpg" alt="Event Photo" class="event-image">
+                            <img src="assets/event_3/579535782_17899807812317967_7597299834075637898_n.jpg" alt="Event Photo" class="event-image">
+                        </div>
+                    </div>
+                    <div class="timeline-event" data-side="left">
+                        <div class="event-content">
+                            <div class="event-date">March 29, 2025</div>
+                            <div class="event-title">Mary Queen of Angels</div>
+                            <div class="event-description">Spring came alive through our flower painting session! Residents painted vibrant blooms while sharing stories and memories, creating a space filled with joy, creativity, and connection.</div>
+                        </div>
+                        <div class="event-dot"></div>
+                        <div class="event-images event-images-right">
+                            <img src="assets/event_2/487403761_17873394423317967_546712335750715114_n.jpg" alt="Event Photo" class="event-image">
+                            <img src="assets/event_2/487840407_17873394387317967_6563192140513706333_n.jpg" alt="Event Photo" class="event-image">
+                            <img src="assets/event_2/487900099_17873394414317967_3893010978400188908_n.jpg" alt="Event Photo" class="event-image">
+                        </div>
+                    </div>
+                    <div class="timeline-event" data-side="right">
+                        <div class="event-content">
+                            <div class="event-date">February 9, 2025</div>
+                            <div class="event-title">Mary Queen of Angels</div>
+                            <div class="event-description">Our very first event was unforgettable! We painted together, laughed together, and were deeply moved as residents opened their hearts, sharing incredible stories and wisdom that left us all inspired.</div>
+                        </div>
+                        <div class="event-dot"></div>
+                        <div class="event-images event-images-left">
+                            <img src="assets/event_1/476725840_17866521450317967_5757192789420668294_n(1).jpg" alt="Event Photo" class="event-image">
+                            <img src="assets/event_1/476747268_17866521429317967_861514148137174199_n(1).jpg" alt="Event Photo" class="event-image">
+                            <img src="assets/event_1/476768139_17866521438317967_2672404335589123809_n(1).jpg" alt="Event Photo" class="event-image">
+                        </div>
+                    </div>
+                    <div class="timeline-event" data-side="left">
+                        <div class="event-content">
+                            <div class="event-date">September 23, 2024</div>
+                            <div class="event-title">Vanderbilt Chapter Founded</div>
+                            <div class="event-description">The Dementia Art Therapy Alliance at Vanderbilt was officially established, marking the beginning of our journey to bring art, healing, and connection to those affected by dementia.</div>
+                        </div>
+                        <div class="event-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Board Section -->
+    <section id="board" class="section">
+        <div class="section-content">
+            <h2 class="section-title">Board</h2>
+            <div class="board-container">
+                <!-- Co-Presidents -->
+                <div class="co-presidents">
+                    <div class="board-member">
+                        <div class="member-photo">
+                            <img src="assets/board/faris_abusharkh.jpg" alt="Faris Abusharkh" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div class="member-name">Faris Abusharkh</div>
+                            <div class="member-title">Co-President</div>
+                        </div>
+                    </div>
+                    <div class="board-member">
+                        <div class="member-photo">
+                            <img src="assets/board/sajjad_khobaib.jpg" alt="Sajjad Khobaib" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div class="member-name">Sajjad Khobaib</div>
+                            <div class="member-title">Co-President</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Other Board Members -->
+                <div class="board-members">
+                    <div class="board-member">
+                        <div class="member-photo">
+                            <img src="assets/board/saad_khan.jpg" alt="Saad Khan" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div class="member-name">Saad Khan</div>
+                            <div class="member-title">Treasurer</div>
+                        </div>
+                    </div>
+                    <div class="board-member">
+                        <div class="member-photo">
+                            <img src="" alt="Katie Bang" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div class="member-name">Katie Bang</div>
+                            <div class="member-title">Treasurer</div>
+                        </div>
+                    </div>
+                    <div class="board-member">
+                        <div class="member-photo">
+                            <img src="" alt="Clare Rollins" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div class="member-name">Clare Rollins</div>
+                            <div class="member-title">Secretary</div>
+                        </div>
+                    </div>
+                    <div class="board-member">
+                        <div class="member-photo">
+                            <img src="" alt="Razil Fernandes" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div class="member-name">Razil Fernandes</div>
+                            <div class="member-title">Secretary</div>
+                        </div>
+                    </div>
+                    <div class="board-member">
+                        <div class="member-photo">
+                            <img src="assets/board/haaris_khan.png" alt="Haaris Khan" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div class="member-name">Haaris Khan</div>
+                            <div class="member-title">Social Chair</div>
+                        </div>
+                    </div>
+                    <div class="board-member">
+                        <div class="member-photo">
+                            <img src="assets/board/dominick_kamssu.jpg" alt="Dominick Kamssu" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div class="member-name">Dominick Kamssu</div>
+                            <div class="member-title">Social Chair</div>
+                        </div>
+                    </div>
+                    <div class="board-member">
+                        <div class="member-photo">
+                            <img src="" alt="Betzy Martinez Gato" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <div class="member-name">Betzy Martinez Gato</div>
+                            <div class="member-title">Program Coordinator</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="section-content">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="assets/gallery/581016050_17900542782317967_3638588456103311419_n.jpg" alt="Gallery Photo" class="gallery-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/gallery/581555866_17900542761317967_2779962735382237857_n.jpg" alt="Gallery Photo" class="gallery-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/gallery/581718191_17900542839317967_958593253550176405_n.jpg" alt="Gallery Photo" class="gallery-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/gallery/582690912_17900542821317967_719208588000593291_n.jpg" alt="Gallery Photo" class="gallery-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/gallery/582706402_17900542848317967_8750435350169963447_n.jpg" alt="Gallery Photo" class="gallery-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/gallery/583314407_17900542830317967_2876748802694847924_n.jpg" alt="Gallery Photo" class="gallery-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Us Section -->
+    <section id="bookus" class="section">
+        <div class="section-content">
+            <h2 class="section-title">Book Us</h2>
+            <div class="section-body">
+                <p>Coming Soon</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
