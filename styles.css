@@ -89,7 +89,7 @@ body::before {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(1.5px);
+    /* filter: blur(1.5px); */
     z-index: 0;
 }
 
