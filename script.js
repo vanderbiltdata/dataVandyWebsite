@@ -210,58 +210,58 @@ window.addEventListener("resize", () => {
   if (active) moveIndicatorTo(active);
 });
 
-// Smooth scroll snapping when 10% of next section is visible
-let isSectionScrolling = false;
-let lastScrollTop = 0;
-let scrollDirection = 0; // 1 = down, -1 = up, 0 = unknown
+// // Smooth scroll snapping when 10% of next section is visible
+// let isSectionScrolling = false;
+// let lastScrollTop = 0;
+// let scrollDirection = 0; // 1 = down, -1 = up, 0 = unknown
 
-window.addEventListener('scroll', () => {
-  if (isSectionScrolling) return;
+// window.addEventListener('scroll', () => {
+//   if (isSectionScrolling) return;
   
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  const viewportHeight = window.innerHeight;
-  const scrollDelta = scrollTop - lastScrollTop;
+//   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//   const viewportHeight = window.innerHeight;
+//   const scrollDelta = scrollTop - lastScrollTop;
   
-  // Determine scroll direction
-  if (Math.abs(scrollDelta) > 1) {
-    scrollDirection = scrollDelta > 0 ? 1 : -1;
-  }
-  lastScrollTop = scrollTop;
+//   // Determine scroll direction
+//   if (Math.abs(scrollDelta) > 1) {
+//     scrollDirection = scrollDelta > 0 ? 1 : -1;
+//   }
+//   lastScrollTop = scrollTop;
   
-  // Check each section to see if 10% is visible
-  sections.forEach(({ section }) => {
-    const rect = section.getBoundingClientRect();
-    const sectionHeight = section.offsetHeight;
-    const visibleThreshold = sectionHeight * 0.1; // 10% of section
+//   // Check each section to see if 10% is visible
+//   sections.forEach(({ section }) => {
+//     const rect = section.getBoundingClientRect();
+//     const sectionHeight = section.offsetHeight;
+//     const visibleThreshold = sectionHeight * 0.1; // 10% of section
     
-    // Check if scrolling down and 10% of section is visible from bottom
-    if (scrollDirection === 1 && rect.top < viewportHeight && rect.top > viewportHeight - visibleThreshold) {
-      // Next section is coming into view from bottom
-      if (!isSectionScrolling) {
-        isSectionScrolling = true;
-        section.scrollIntoView({ 
-          behavior: 'smooth', 
-          block: 'start' 
-        });
-        setTimeout(() => {
-          isSectionScrolling = false;
-        }, 1000);
-      }
-    }
+//     // Check if scrolling down and 10% of section is visible from bottom
+//     if (scrollDirection === 1 && rect.top < viewportHeight && rect.top > viewportHeight - visibleThreshold) {
+//       // Next section is coming into view from bottom
+//       if (!isSectionScrolling) {
+//         isSectionScrolling = true;
+//         section.scrollIntoView({ 
+//           behavior: 'smooth', 
+//           block: 'start' 
+//         });
+//         setTimeout(() => {
+//           isSectionScrolling = false;
+//         }, 1000);
+//       }
+//     }
     
-    // Check if scrolling up and 10% of section is visible from top
-    if (scrollDirection === -1 && rect.bottom > 0 && rect.bottom < visibleThreshold) {
-      // Previous section is coming into view from top
-      if (!isSectionScrolling) {
-        isSectionScrolling = true;
-        section.scrollIntoView({ 
-          behavior: 'smooth', 
-          block: 'start' 
-        });
-        setTimeout(() => {
-          isSectionScrolling = false;
-        }, 1000);
-      }
-    }
-  });
-});
+//     // Check if scrolling up and 10% of section is visible from top
+//     if (scrollDirection === -1 && rect.bottom > 0 && rect.bottom < visibleThreshold) {
+//       // Previous section is coming into view from top
+//       if (!isSectionScrolling) {
+//         isSectionScrolling = true;
+//         section.scrollIntoView({ 
+//           behavior: 'smooth', 
+//           block: 'start' 
+//         });
+//         setTimeout(() => {
+//           isSectionScrolling = false;
+//         }, 1000);
+//       }
+//     }
+//   });
+// });
