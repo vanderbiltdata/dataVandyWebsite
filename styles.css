@@ -113,8 +113,15 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .logo-section {
+    flex-direction: column;
+  }
 }
 
 .x-character {
@@ -123,6 +130,8 @@ body::before {
     font-weight: 400;
     color: white;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    line-height: 0.4;
+    margin-bottom: -0.3em
 }
 
 .vandy-logo {
@@ -629,7 +638,14 @@ body::before {
     margin-bottom: 60px;
     flex-wrap: wrap;
   }
-
+  
+  @media (max-width: 768px) {
+    .co-presidents {
+      margin-left: -10em;
+      margin-right: -10em;
+    }
+  }
+  
   .board-members {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -699,6 +715,7 @@ body::before {
 
   /* Hide default icon when image is loaded successfully */
   .member-image.loaded {
+    content: '';
     opacity: 1;
   }
 
