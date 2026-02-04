@@ -638,28 +638,21 @@ body::before {
     margin-bottom: 30px;
     flex-wrap: wrap;
   }
-  
-  @media (max-width: 768px) {
-    .co-presidents {
-      margin-left: -10em;
-      margin-right: -10em;
-    }
-  }
-  
+
   .vice-presidents {
     display: flex;
     justify-content: center;
     justify-items: center;
     flex-wrap: wrap;
+    width: 100%;
     margin-bottom: 30px;
   }
 
   .board-members {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 30px;
     justify-items: center;
-    align-items: start;
     justify-content: center;
   }
 
