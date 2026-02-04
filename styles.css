@@ -635,7 +635,7 @@ body::before {
     display: flex;
     justify-content: center;
     gap: 60px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     flex-wrap: wrap;
   }
   
@@ -646,6 +646,11 @@ body::before {
     }
   }
   
+  .vice-presidents {
+    justify-items: center;
+    margin-bottom: 30px;
+  }
+
   .board-members {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
