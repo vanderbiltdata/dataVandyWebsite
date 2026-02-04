@@ -647,7 +647,10 @@ body::before {
   }
   
   .vice-presidents {
+    display: flex;
+    justify-content: center;
     justify-items: center;
+    flex-wrap: wrap;
     margin-bottom: 30px;
   }
 
