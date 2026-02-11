@@ -523,7 +523,7 @@ body::before {
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
-    pointer-events: none;
+    pointer-events: auto;
     width: 200px;
     height: 200px;
   }
@@ -544,6 +544,8 @@ body::before {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     border: 3px solid #ffffff;
     position: absolute;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
   }
 
   /* 2 images on top, 1 on bottom */
@@ -571,6 +573,28 @@ body::before {
     left: 40px;
     animation: floatImage3 5.2s ease-in-out infinite;
     animation-delay: 1s;
+  }
+
+  /* Enlarge timeline images on hover */
+  .event-image:nth-child(1):hover {
+    animation: none;
+    transform: translate(3px, -5px) rotate(-6deg) scale(1.5);
+    z-index: 4;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  .event-image:nth-child(2):hover {
+    animation: none;
+    transform: translate(-3px, -5px) rotate(7deg) scale(1.5);
+    z-index: 4;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  .event-image:nth-child(3):hover {
+    animation: none;
+    transform: translate(2px, -4px) rotate(-1deg) scale(1.5);
+    z-index: 4;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
   }
 
   @keyframes floatImage1 {
@@ -650,7 +674,7 @@ body::before {
 
   .board-members {
     display: grid;
-    grid-template-columns: repeat(5, 130px);
+    grid-template-columns: repeat(5, 12%);
     justify-items: center;
     justify-content: center;
     gap: 30px 50px;
